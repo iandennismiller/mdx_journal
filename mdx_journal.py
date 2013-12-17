@@ -10,7 +10,7 @@ class MyTokenizer(HTMLSanitizer):
 
 class JournalPostprocessor(Postprocessor):
     def run(self, text):
-        if re.match(r"^%d%d%d%d$", text):
+        if re.match(r"^\d\d\d\d$", text):
             text = "<h2>%s</h2>" % text
         return text
 

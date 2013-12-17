@@ -1,5 +1,3 @@
-#! /usr/bin/env python
-
 from setuptools import setup
 
 setup(
@@ -19,6 +17,6 @@ setup(
         'Environment :: Web Environment',
         'Programming Language :: Python',
         'Topic :: Text Processing :: Filters',
-        'Topic :: Text Processing :: Markup :: HTML'
+        'Topic :: Text Processing :: Markup :: HTML',
     ]
 )
