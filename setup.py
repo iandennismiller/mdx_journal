@@ -9,6 +9,7 @@ setup(
     url='http://github.com/iandennismiller/mdx_journal',
     py_modules=['mdx_journal'],
     install_requires=['Markdown>=2.0',],
+    zip_safe=False,
     classifiers=[
         'Development Status :: 4 - Beta',
         'Operating System :: OS Independent',
