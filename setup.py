@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='mdx_journal',
-    version='0.1',
+    version='0.1.1',
     author='Ian Dennis Miller',
     author_email='iandennismiller@gmail.com',
     description='Python-Markdown extension for annotating journal text files',
