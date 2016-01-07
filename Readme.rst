@@ -1,10 +1,19 @@
-# Mdx Journal
+mdx-journal
+===========
 
-This python markdown extension will annotate your journal entries.
+Extend Python Markdown with the `gthnk <http://gthnk.com>`_ journal annotation format.  With this extension installed, all datestamps and timestamps will be rendered as headings.
 
-# An example
+Installation
+------------
+
+    pip install mdx-journal
+
+An example
+----------
 
 First, let's look at a journal entry without this custom markup.
+
+::
 
     >>> from markdown import markdown
     >>> text = "2013-12-16\n\n1620\n\nThis is the first entry\n1621\n\nAnd this is the second entry"
@@ -13,10 +22,12 @@ First, let's look at a journal entry without this custom markup.
 
 Now let's look at a journal entry with journal markup applied.  You will see that dates and times are now wrapped in heading tags.
 
+::
+
     >>> markdown(text, extensions=["journal"])
     u'<p><h3>2013-12-16</h3></p>\n<p><h4>1620</h4></p>\n<p>This is the first entry\n<h4>1621</h4></p>\n<p>And this is the second entry</p>'
 
-# Installation
+License
+-------
 
-    pip install git+https://github.com/iandennismiller/mdx_journal
-
+MIT License.

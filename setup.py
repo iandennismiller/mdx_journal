@@ -1,19 +1,41 @@
 # mdx_journal (c) Ian Dennis Miller
 
 from setuptools import setup
+import os
+import re
+
+
+# from https://github.com/flask-admin/flask-admin/blob/master/setup.py
+def fpath(name):
+    return os.path.join(os.path.dirname(__file__), name)
+
+
+def read(fname):
+    return open(fpath(fname)).read()
+
+
+file_text = read(fpath('mdx_journal/__meta__.py'))
+
+
+def grep(attrname):
+    pattern = r"{0}\W*=\W*'([^']+)'".format(attrname)
+    strval, = re.findall(pattern, file_text)
+    return strval
+
 
 setup(
     name='mdx_journal',
-    version='0.1.1',
-    author='Ian Dennis Miller',
-    author_email='iandennismiller@gmail.com',
-    description='Python-Markdown extension for annotating journal text files',
-    url='http://github.com/iandennismiller/mdx_journal',
-    py_modules=['mdx_journal'],
-    install_requires=[
-        'Markdown>=2.0',
+    description='Python-Markdown extension for annotating gthnk journal text files',
+    version=grep('__version__'),
+    author=grep('__author__'),
+    author_email=grep('__email__'),
+    url=grep('__url__'),
+    py_modules=[
+        'mdx_journal',
     ],
+    install_requires=read('requirements.txt'),
     zip_safe=False,
+    license='MIT',
     classifiers=[
         'Development Status :: 4 - Beta',
         'Operating System :: OS Independent',
