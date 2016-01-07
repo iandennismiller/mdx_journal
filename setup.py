@@ -1,3 +1,5 @@
+# mdx_journal (c) Ian Dennis Miller
+
 from setuptools import setup
 
 setup(
@@ -8,7 +10,9 @@ setup(
     description='Python-Markdown extension for annotating journal text files',
     url='http://github.com/iandennismiller/mdx_journal',
     py_modules=['mdx_journal'],
-    install_requires=['Markdown>=2.0',],
+    install_requires=[
+        'Markdown>=2.0',
+    ],
     zip_safe=False,
     classifiers=[
         'Development Status :: 4 - Beta',
