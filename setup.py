@@ -30,7 +30,7 @@ setup(
     author=grep('__author__'),
     author_email=grep('__email__'),
     url=grep('__url__'),
-    py_modules=[
+    packages=[
         'mdx_journal',
     ],
     install_requires=read('requirements.txt'),
