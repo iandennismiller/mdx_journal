@@ -6,7 +6,14 @@ Extend Python Markdown with the `gthnk <http://gthnk.com>`_ journal annotation f
 Installation
 ------------
 
+::
+
     pip install mdx-journal
+
+Documentation
+-------------
+
+Please see `the Readme file on github <https://github.com/iandennismiller/mdx_journal/blob/master/Readme.rst>`_.
 
 An example
 ----------
@@ -26,6 +33,11 @@ Now let's look at a journal entry with journal markup applied.  You will see tha
 
     >>> markdown(text, extensions=["journal"])
     u'<p><h3>2013-12-16</h3></p>\n<p><h4>1620</h4></p>\n<p>This is the first entry\n<h4>1621</h4></p>\n<p>And this is the second entry</p>'
+
+Source
+------
+
+https://github.com/iandennismiller/mdx_journal
 
 License
 -------

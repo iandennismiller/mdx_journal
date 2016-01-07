@@ -26,6 +26,7 @@ def grep(attrname):
 setup(
     name='mdx_journal',
     description='Python-Markdown extension for annotating gthnk journal text files',
+    long_description=read('Readme.rst'),
     version=grep('__version__'),
     author=grep('__author__'),
     author_email=grep('__email__'),
