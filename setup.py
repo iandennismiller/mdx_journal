@@ -37,6 +37,7 @@ setup(
     install_requires=read('requirements.txt'),
     zip_safe=False,
     license='MIT',
+    include_package_data=True,
     classifiers=[
         'Development Status :: 4 - Beta',
         'Operating System :: OS Independent',
